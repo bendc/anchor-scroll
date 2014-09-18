@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
       var endPos = document.getElementById(/[^#]+$/.exec(this.href)[0]).getBoundingClientRect().top
       var maxScroll = root.scrollHeight - window.innerHeight
       var scrollEndValue = startPos + endPos < maxScroll ? endPos : maxScroll - startPos
-      var duration = 1000
+      var duration = 900
       var scroll = function(timestamp) {
         startTime = startTime || timestamp
         var elapsed = timestamp - startTime
         var progress = easeInOutCubic(elapsed, startPos, scrollEndValue, duration)
         root.scrollTop = progress
-        if (elapsed < duration) requestAnimationFrame(scroll)
+        elapsed < duration && requestAnimationFrame(scroll)
       }   
       requestAnimationFrame(scroll)
       e.preventDefault()
