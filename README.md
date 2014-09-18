@@ -1,6 +1,6 @@
 # Anchor scrolling library
 
-Simple 1KB plugin for animating anchor links. [View demo](http://playground.deaxon.com/js/anchor-scrolling-library/).
+Simple 0.5KB plugin for animating anchor links. [View demo](http://playground.deaxon.com/js/anchor-scrolling-library/).
 
 ## Usage
 
