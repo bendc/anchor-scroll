@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var links = document.querySelectorAll("a.scroll")
   var i = links.length
   var root = /firefox|trident/i.test(navigator.userAgent) ? document.documentElement : document.body
-  var transform = "transform" in root.style ? "transform" : "webkitTransform"
   var easeInOutCubic = function(t, b, c, d) {
     if ((t/=d/2) < 1) return c/2*t*t*t + b
     return c/2*((t-=2)*t*t + 2) + b
