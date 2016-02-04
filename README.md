@@ -1,11 +1,11 @@
 # Anchor scrolling library
 
-Simple 0.5KB plugin for animating anchor links. [View demo](http://playground.deaxon.com/js/anchor-scrolling-library/).
+Simple 1KB plugin for animating anchor links. [View demo](http://playground.deaxon.com/js/anchor-scroll-demo/).
 
 ## Usage
 
-1. Insert scroll.js anywhere on your page.
-2. Add a `scroll` class on your links and the correct ids and anchors.
+1. Insert `scroll.min.js` in your page.
+2. Add a `scroll` class to your anchors.
 
 ```html
 <a class=scroll href=#intro>Intro</a>
@@ -14,5 +14,5 @@ Simple 0.5KB plugin for animating anchor links. [View demo](http://playground.de
 <section id=intro> … </section>
 <section id=about> … </section>
 
-<script src=scroll.js></script>
+<script src=scroll.min.js></script>
 ```
