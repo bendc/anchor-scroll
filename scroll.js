@@ -50,9 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     root.scrollTop = coordinates.get("start") + coordinates.get("delta");
   };
 
-  const last = list => list.length - 1;
-
-  const attachHandler = (links, index = last(links)) => {
+  const attachHandler = (links, index) => {
     const link = links.item(index);
     link.addEventListener("click", event => {
       event.preventDefault();
@@ -61,5 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index) return attachHandler(links, index - 1);
   };
 
-  attachHandler(document.querySelectorAll("a.scroll"));
+  const links = document.querySelectorAll("a.scroll");
+  const last = links.length - 1;
+  if (last < 0) return;
+  attachHandler(links, last);
 });
